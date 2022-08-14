@@ -1,0 +1,36 @@
+.peculiarities {
+    padding-bottom: 0;
+  }
+
+  .peculiarities__list {
+    display: flex;
+
+    gap: 30px;
+  }
+
+   
+  .peculiarities__wrap {
+   padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-icon);
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+
+  .peculiarities__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .peculiarities__description {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--description-color);
+  }

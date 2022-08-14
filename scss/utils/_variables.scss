@@ -1,0 +1,23 @@
+/* BLOCK 1 → UTILS */
+
+:root {
+    /* fonts */
+    --main-font: 'Roboto', sans-serif;
+    --logo-font: 'Raleway', sans-serif;
+
+    /* colors */
+    --accent-color: #2196f3;
+    --main_white-color: #ffffff;
+    --main-black-color: #212121;
+    --description-color: #757575;
+    --bg-dark-gray-color: #2f303a;
+    --bg-light-gray-color: #f5f4fa;
+    --btn-hover-color: #188ce8;
+    --border-color: #ececec;
+    --bg-icon: #f5f4fa;
+    --icons-color: #afb1b8;
+    --absolut-black: #000000;
+
+    /* others */
+    --anim-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
