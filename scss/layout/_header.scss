@@ -1,11 +1,11 @@
-// .header {
-//   border-bottom: 1px solid var(--border-color);
-// }
+.header {
+  border-bottom: 1px solid var(--border-color);
+}
 
 .header__navigation {
   display: flex;
   align-items: center;
-  padding: 16px 15px;
+  padding: 16px 0;
 }
 
 .header__list {
@@ -49,32 +49,31 @@
 }
 
 .header__contact {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    list-style-type: none;
-    display: flex;
-    margin-left: auto;
-  }
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  list-style-type: none;
+  display: flex;
+  margin-left: auto;
+}
 
-  .header__btn {
-    color: var(--description-color);
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    display: flex;
-    align-items: center;
-  
-    transition: color var(--anim-fast);
+.header__btn {
+  color: var(--description-color);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  align-items: center;
 
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
-    }
+  transition: color var(--anim-fast);
 
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
   }
-  
-  .header__mail {
-    margin-right: 50px;
-  }
+}
+
+.header__mail {
+  margin-right: 50px;
+}
