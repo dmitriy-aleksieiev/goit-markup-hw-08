@@ -6,10 +6,10 @@
   display: flex;
   // align-items: center;
   padding: 16px 0;
+  // width: 100%;
 }
 
 .btn-menu {
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -25,7 +25,10 @@
   cursor: pointer;
   fill: var(--main-black-color);
 
-  margin-left: auto;
+  // margin-left: auto;
+  position: absolute;
+  top: 10px;
+  right: 15px;
 
   &:active {
     fill: var(--accent-color);
