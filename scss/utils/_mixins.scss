@@ -1,0 +1,65 @@
+// @mixin transition($property: color, $time: $transition-duration, $function: $transition-function) {
+//   transition-property: $property;
+//   transition-duration: $time;
+//   transition-timing-function: $function;
+// }
+
+// @mixin centered-flex($type: flex, $justify-content: center, $align-items: center) {
+//   display: $type;
+//   justify-content: $justify-content;
+//   align-items: $align-items;
+// }
+
+// @mixin section($padding: 60px) {
+//   padding-top: $padding;
+//   padding-bottom: $padding;
+// }
+
+// @mixin fonts($fs, $lh, $fw: 400, $ls: 0.03em) {
+//   font-weight: $fw;
+//   font-size: $fs;
+//   line-height: decimal-round($lh / $fs);
+//   letter-spacing: $ls;
+// }
+
+// @mixin flex-basis($indent, $item) {
+//   flex-basis: calc((100% - #{$indent} * (#{$item} - 1)) / #{$item});
+// }
+
+// @mixin media-query($range) {
+//   @if $range==mobile-less {
+//     @media (max-width:#{$mobile - 0.02}) {
+//       @content;
+//     }
+//   }
+//   @if $range==mobile {
+//     @media screen and (min-width: $mobile) {
+//       @content;
+//     }
+//   }
+//   @if $range==tablet-less {
+//     @media (max-width:#{$tablet - 0.02}) {
+//       @content;
+//     }
+//   }
+//   @if $range==tablet {
+//     @media screen and (min-width: $tablet) {
+//       @content;
+//     }
+//   }
+//   @if $range==tablet-only {
+//     @media (min-width:$tablet) and (max-width:#{$desktop - 0.02}) {
+//       @content;
+//     }
+//   }
+//   @if $range==desktop {
+//     @media screen and (min-width: $desktop) {
+//       @content;
+//     }
+//   }
+//   @if $range==desktop-less {
+//     @media (max-width:#{$desktop - 0.02}) {
+//       @content;
+//     }
+//   }
+// }

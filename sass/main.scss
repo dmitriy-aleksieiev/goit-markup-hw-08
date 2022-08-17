@@ -1,0 +1,34 @@
+@import './utils/variables';
+@import './utils/breakpoints';
+@import './utils/placeholders';
+@import './utils/mixins';
+
+@import './components/basic';
+@import './components/logo';
+@import './components/social';
+@import './components/buttons';
+@import './components/animations';
+
+@import './components/slide-top-btn';
+
+@import './components/page-header/page-header';
+@import './components/page-header/burger-menu';
+@import './components/page-header/navigation';
+@import './components/page-header/contacts';
+@import './components/page-header/header-social';
+
+@import './components/main-index/hero';
+@import './components/main-index/features';
+@import './components/main-index/work';
+@import './components/main-index/team';
+@import './components/main-index/clients';
+
+@import './components/main-portfolio/filter';
+@import './components/main-portfolio/projects';
+
+@import './components/page-footer/page-footer';
+@import './components/page-footer/about';
+@import './components/page-footer/join';
+@import './components/page-footer/subscription';
+
+@import './components/main-index/modal';
