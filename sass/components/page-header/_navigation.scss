@@ -1,0 +1,83 @@
+/* Навигация по сайту */
+
+.site-nav {
+  @extend %list;
+
+  @media screen and (min-width: $tablet) {
+    @include centered-flex();
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (max-width: ($tablet - 1px)) {
+      margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-right: 50px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: $title-text-color;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    display: block;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+      font-size: 40px;
+      line-height: calc(48 / 40);
+    }
+
+    @media screen and (min-width: $tablet) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    @include transition();
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+
+  &__link--current {
+    color: $accent-color;
+  }
+
+  /*Current Page*/
+  &__link::after {
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+      border-radius: 2px;
+
+      opacity: 0;
+      @include transition(opacity);
+    }
+  }
+
+  // &__link:hover::after {
+  //   @media screen and (min-width: $tablet) {
+  //     opacity: 1;
+  //   }
+  // }
+
+  &__link--current::after {
+    @media screen and (min-width: $tablet) {
+      opacity: 1;
+    }
+  }
+}

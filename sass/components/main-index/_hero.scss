@@ -1,0 +1,73 @@
+.hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $primary-bg-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 118px 0;
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    image-set(url('/images/hero/hero_img@2x_sm.jpg') 2x, url('/images/hero/hero_img@1x_sm.jpg') 1x);
+
+  @include media-query(tablet) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      image-set(
+        url('/images/hero/hero_img@2x_md.jpg') 2x,
+        url('/images/hero/hero_img@1x_md.jpg') 1x
+      );
+  }
+
+  @include media-query(desktop) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      image-set(
+        url('/images/hero/hero_img@2x_lg.jpg') 2x,
+        url('/images/hero/hero_img@1x_lg.jpg') 1x
+      );
+  }
+
+  //    Закрепленный хэдэр
+  @include media-query(tablet) {
+    margin-top: 80px;
+  }
+  //    Закрепленный хэдэр
+
+  @include media-query(desktop) {
+    padding: 200px 0;
+  }
+
+  &__box {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-query(desktop) {
+      max-width: 696px;
+    }
+  }
+
+  &__title {
+    color: $primary-white-color;
+
+    font-weight: 900;
+    font-size: 20px;
+    line-height: calc(30 / 20);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    @include media-query(mobile) {
+      font-size: 26px;
+      line-height: calc(42 / 26);
+      letter-spacing: 0.06em;
+    }
+
+    @include media-query(desktop) {
+      font-size: 44px;
+      line-height: calc(60 / 44);
+    }
+  }
+}

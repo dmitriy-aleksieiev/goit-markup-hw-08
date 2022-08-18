@@ -1,0 +1,90 @@
+/* Фильтры портфолио */
+
+.filter {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 15px;
+
+  margin-bottom: 40px;
+
+  @include media-query(tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  //    Закрепленный хэдэр
+  @include media-query(tablet) {
+    margin-top: 80px;
+  }
+  //    Закрепленный хэдэр
+
+  @include media-query(desktop) {
+    margin-bottom: 50px;
+  }
+
+  &__button {
+    display: inline-block;
+    color: $title-text-color;
+    background-color: $second-grey-color;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(26 / 16);
+
+    padding: 6px 22px;
+    text-align: center;
+
+    height: 38px;
+
+    border: 0;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: color $transition-duration $transition-function,
+      background-color $transition-duration $transition-function,
+      box-shadow $transition-duration $transition-function;
+  }
+
+  &__button:hover,
+  &__button:focus {
+    color: $primary-white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// Фильтрация по кнопкам в портфолию
+
+// input[type="radio"] {
+//   position: absolute;
+//   left: -9999px;
+// }
+
+[value='Все']:checked ~ .filter [for='Все'],
+[value='Веб-сайт']:checked ~ .filter [for='Веб-сайт'],
+[value='Приложение']:checked ~ .filter [for='Приложение'],
+[value='Дизайн']:checked ~ .filter [for='Дизайн'],
+[value='Маркетинг']:checked ~ .filter [for='Маркетинг'] {
+  color: $primary-white-color;
+  background-color: $accent-color;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+[value='Все']:checked ~ .projects [data-category] {
+  display: flex;
+}
+
+[value='Веб-сайт']:checked ~ .projects .projects__item:not([data-category~='Веб-сайт']),
+[value='Приложение']:checked ~ .projects .projects__item:not([data-category~='Приложение']),
+[value='Дизайн']:checked ~ .projects .projects__item:not([data-category~='Дизайн']),
+[value='Маркетинг']:checked ~ .projects .projects__item:not([data-category~='Маркетинг']) {
+  display: none;
+}
+
+// Фильтрация по кнопкам в портфолию

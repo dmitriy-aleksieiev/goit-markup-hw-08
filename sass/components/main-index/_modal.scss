@@ -1,0 +1,265 @@
+/* Модальное окно - Заказать услугу */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $modal-window-bg-color;
+  z-index: 1001;
+
+  overflow-y: scroll;
+
+  opacity: 1;
+
+  transition: visibility $transition-duration $transition-function,
+    opacity $transition-duration $transition-function;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.modal {
+  width: 100%;
+  padding: 40px;
+  background-color: $primary-white-color;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+
+  transition: transform $transition-duration $transition-function,
+    opacity $transition-duration $transition-function;
+
+  @include media-query(mobile) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 450px;
+    max-height: 609px;
+
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  @include media-query(desktop) {
+    max-width: 528px;
+    max-height: 581px;
+  }
+}
+
+.btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $primary-white-color;
+  border: 1px solid $second-border-color;
+
+  @include centered-flex();
+
+  cursor: pointer;
+
+  @include transition();
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &__icon {
+    fill: currentColor;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.order {
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-query(desktop) {
+    max-width: 528px;
+  }
+
+  &__title {
+    display: block;
+    font-size: 20px;
+    line-height: calc(30 / 20);
+    color: $title-text-color;
+
+    margin-bottom: 12px;
+    text-align: center;
+
+    @include media-query(desktop) {
+      line-height: calc(23.44 / 20);
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14.06 / 12);
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 11px 42px;
+    border-radius: 4px;
+    border: 1px solid $third-border-color;
+    font: inherit;
+    outline: none;
+
+    @include transition(border-color);
+
+    @include media-query(desktop) {
+      max-width: 448px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 65%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    fill: $title-text-color;
+    width: 18px;
+    height: 18px;
+
+    @include transition(fill);
+
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
+
+    .order__input:focus-within + &,
+    .order__input:hover + & {
+      fill: $accent-color;
+    }
+  }
+
+  &__commentary {
+    display: block;
+    width: 100%;
+    min-height: 120px;
+    margin: 4px 0px 0px 0px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: 1px solid $third-border-color;
+    font-size: 14px;
+    line-height: calc(16.41 / 14);
+    letter-spacing: 0.01em;
+    outline: none;
+
+    @include transition(border-color);
+
+    @include media-query(desktop) {
+      max-width: 448px;
+    }
+  }
+
+  &__commentary::placeholder {
+    color: $modal-window-commentary-text-color;
+  }
+
+  &__input:focus-within,
+  &__commentary:focus-within {
+    border-color: $accent-color;
+  }
+
+  &__agreement {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14.06 / 12);
+    letter-spacing: 0.01em;
+
+    @include centered-flex();
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  &__checkbox {
+    /* Скрытие стандартного чекбокса (для всех браузеров)*/
+    @extend %visually-hidden;
+  }
+
+  &__checkbox-custom {
+    @include centered-flex();
+
+    background-color: $primary-white-color;
+    width: 16px;
+    height: 15px;
+
+    margin-right: 7px;
+
+    border-radius: 2px;
+    border: 2px solid $title-text-color;
+
+    transition: background-color $transition-duration $transition-function,
+      border $transition-duration $transition-function;
+  }
+
+  /* При клике на чекбоксе меняет иконку */
+  &__checkbox:checked + &__checkbox-custom {
+    background-color: $accent-color;
+    border: 0;
+  }
+
+  &__checkbox:hover + &__checkbox-custom,
+  &__checkbox:focus + &__checkbox-custom {
+    border-color: $accent-color;
+  }
+
+  &__text,
+  &__link {
+    font-size: 12px;
+    line-height: calc(14.06 / 12);
+    letter-spacing: 0.03em;
+
+    @include media-query(mobile) {
+      white-space: nowrap;
+    }
+
+    @include media-query(desktop) {
+      font-size: 14px;
+      line-height: calc(24 / 14);
+    }
+  }
+
+  &__link {
+    color: $accent-color;
+    text-decoration-color: $accent-color;
+    text-decoration-line: underline;
+    text-underline-position: under;
+  }
+}

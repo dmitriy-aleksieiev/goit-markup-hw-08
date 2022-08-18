@@ -1,0 +1,18 @@
+/* Подвал */
+.page-footer {
+  background-color: $primary-bg-color;
+  padding: 60px 0;
+
+  &__content {
+    text-align: center;
+
+    @include media-query(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include media-query(desktop) {
+      text-align: left;
+    }
+  }
+}

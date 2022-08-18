@@ -1,0 +1,38 @@
+/* Чем мы занимаемся */
+
+.work {
+  @include media-query(desktop-less) {
+    display: none;
+  }
+
+  &__list {
+    @extend %list;
+    @include centered-flex($justify-content: space-between);
+    padding-left: 0;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16.41 / 14);
+    color: $primary-white-color;
+    background-color: $work-text-bg-color;
+
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+}

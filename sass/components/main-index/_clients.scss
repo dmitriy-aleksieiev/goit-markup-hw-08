@@ -1,0 +1,58 @@
+/* Постоянные клиенты*/
+
+.clients {
+  @extend %list;
+  @include centered-flex($justify-content: space-between);
+  flex-wrap: wrap;
+  gap: $indent;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__item {
+    @include media-query(mobile-less) {
+      @include flex-basis($indent, 1);
+    }
+
+    @include media-query(mobile) {
+      @include flex-basis($indent, 2);
+    }
+
+    @include media-query(tablet) {
+      @include flex-basis($indent, 3);
+    }
+
+    @include media-query(desktop) {
+      @include flex-basis($indent, 6);
+    }
+
+    @include transition(box-shadow);
+  }
+
+  &__link {
+    @include centered-flex();
+    text-decoration: none;
+
+    height: 92px;
+
+    color: $clients-primary-color;
+
+    border: 1px solid $clients-primary-color;
+    border-radius: 4px;
+
+    transition: border-color $transition-duration $transition-function,
+      color $transition-duration $transition-function;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+
+  &__icon {
+    fill: currentColor;
+    width: 106px;
+    height: 50px;
+  }
+}

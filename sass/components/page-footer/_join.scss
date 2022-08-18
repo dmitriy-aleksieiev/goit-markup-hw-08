@@ -1,0 +1,30 @@
+.join {
+  @include media-query(tablet-less) {
+    margin-bottom: 60px;
+  }
+
+  @include media-query(desktop) {
+    padding-top: 15px;
+    margin-right: 93px;
+  }
+
+  &__text {
+    color: $primary-white-color;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+  }
+
+  /* Социальные сети студии */
+
+  &__link {
+    color: $primary-white-color;
+    background-color: $social-links-ft-bg-color;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $accent-color;
+  }
+}

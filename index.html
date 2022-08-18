@@ -24,7 +24,6 @@
 
   <body>
     <div class="wrapper">
-
       <!--HEADER-->
       <header class="page-header" id="header" data-header>
         <div class="page-header__content container">
@@ -38,8 +37,8 @@
             data-menu-button
           >
             <svg class="menu-button__svg" aria-label="Переключатель мобильного меню">
-              <use class="icon-menu" href="./images/icons.svg#menu"></use>
-              <use class="icon-cross" href="./images/icons.svg#cross"></use>
+              <use class="icon-menu" href="./images/icons.svg#icon-burger-menu"></use>
+              <use class="icon-close" href="./images/icons.svg#icon-close"></use>
             </svg>
           </button>
 
@@ -62,7 +61,7 @@
               <li class="header-contacts__item">
                 <a class="header-contacts__link" href="mailto:info@devstudio.com">
                   <svg class="header-contacts__icon-mail">
-                    <use href="./images/icons.svg#contacts-mail"></use>
+                    <use href="./images/icons.svg#icon-envelope"></use>
                   </svg>
                   info@devstudio.com</a
                 >
@@ -70,7 +69,7 @@
               <li class="header-contacts__item">
                 <a class="header-contacts__link" href="tel:+380961111111">
                   <svg class="header-contacts__icon-phone">
-                    <use href="./images/icons.svg#contacts-phone"></use>
+                    <use href="./images/icons.svg#icon-smartphone"></use>
                   </svg>
                   +38 096 111 11 11</a
                 >
@@ -101,16 +100,13 @@
         <section class="hero" id="hero">
           <div class="container">
             <div class="hero__box">
-              <h1 class="hero__title">
-                Эффективные&nbsp;решения
-                для&nbsp;вашего&nbsp;бизнеса
-              </h1>
+              <h1 class="hero__title">Эффективные&nbsp;решения для&nbsp;вашего&nbsp;бизнеса</h1>
               <button class="button" type="button" data-modal-open>Заказать услугу</button>
             </div>
           </div>
         </section>
 
-        <!--Особенности-->
+        <!--Peculiarities Section-->
         <section class="section section--no-padding-bottom">
           <div class="container">
             <h2 class="section__title visually-hidden">Особенности</h2>
@@ -118,7 +114,7 @@
               <li class="features__item">
                 <div class="features__box">
                   <svg class="features__icon">
-                    <use href="./images/icons.svg#features-antenna"></use>
+                    <use href="./images/icons.svg#icon-antenna"></use>
                   </svg>
                 </div>
                 <h3 class="features__title">Внимание к деталям</h3>
@@ -129,7 +125,7 @@
               <li class="features__item">
                 <div class="features__box">
                   <svg class="features__icon">
-                    <use href="./images/icons.svg#features-clock"></use>
+                    <use href="./images/icons.svg#icon-clock"></use>
                   </svg>
                 </div>
                 <h3 class="features__title">Пунктуальность</h3>
@@ -141,7 +137,7 @@
               <li class="features__item">
                 <div class="features__box">
                   <svg class="features__icon">
-                    <use href="./images/icons.svg#features-diagram"></use>
+                    <use href="./images/icons.svg#icon-diagram"></use>
                   </svg>
                 </div>
                 <h3 class="features__title">Планирование</h3>
@@ -153,7 +149,7 @@
               <li class="features__item">
                 <div class="features__box">
                   <svg class="features__icon">
-                    <use href="./images/icons.svg#features-astronaut"></use>
+                    <use href="./images/icons.svg#icon-astronaut"></use>
                   </svg>
                 </div>
                 <h3 class="features__title">Современные технологии</h3>
@@ -165,7 +161,7 @@
           </div>
         </section>
 
-        <!--Чем мы занимаемся-->
+        <!-- Work Section -->
         <section class="section work">
           <div class="container">
             <h2 class="section__title">Чем мы занимаемся</h2>
@@ -173,9 +169,12 @@
               <li class="work__item">
                 <div class="work__box">
                   <img
-                    srcset="./images/work/work1@1x-min.jpg 1x, ./images/work/work1@2x-min.jpg 2x"
+                    srcset="
+                      images\work\work_img_01@1x_lg.jpg 1x,
+                      images\work\work_img_01@2x_lg.jpg 2x
+                    "
                     src="./images/work/work1@1x-min.jpg"
-                    alt="Программист за работой"
+                    alt="Работа с кодом на планшете"
                     width="370"
                   />
                   <h3 class="work__text">Десктопные приложения</h3>
@@ -184,9 +183,9 @@
               <li class="work__item">
                 <div class="work__box">
                   <img
-                    srcset="./images/work/work2@1x-min.jpg 1x, ./images/work/work2@2x-min.jpg 2x"
+                    srcset="images\work\work_img_02@1x_lg.jpg, images\work\work_img_02@2x_lg.jpg 2x"
                     src="./images/work/work2@1x-min.jpg"
-                    alt="Дизайнер разрабатывает мобильные приложения"
+                    alt="Работа с версткой на ноутбуке"
                     width="370"
                   />
                   <h3 class="work__text">Мобильные приложения</h3>
@@ -195,9 +194,12 @@
               <li class="work__item">
                 <div class="work__box">
                   <img
-                    srcset="./images/work/work3@1x-min.jpg 1x, ./images/work/work3@2x-min.jpg 2x"
+                    srcset="
+                      images\work\work_img_03@1x_lg.jpg 1x,
+                      images\work\work_img_03@2x_lg.jpg 2x
+                    "
                     src="./images/work/work3@1x-min.jpg"
-                    alt="Художник выбирает цвет"
+                    alt="Работа с цветом на планшете"
                     width="370"
                   />
                   <h3 class="work__text">Дизайнерские решения</h3>
@@ -207,7 +209,7 @@
           </div>
         </section>
 
-        <!--Наша команда-->
+        <!--Team Section -->
         <section class="section section--bc-grey">
           <div class="container">
             <h2 class="section__title">Наша команда</h2>
@@ -216,24 +218,24 @@
                 <picture>
                   <source
                     srcset="
-                      ./images/team/team1@1x-480.jpg 450w,
-                      ./images/team/team1@2x-480.jpg 900w
+                      ./images\team\team_img_01@1x_sm.jpg 1x,
+                      ./images\team\team_img_01@2x_sm.jpg 2x
                     "
                     media="(max-width: 767.98px)"
                     sizes="(min-width: 320px) 450px, 100vw"
                   />
                   <source
                     srcset="
-                      ./images/team/team1@1x-768.jpg 354w,
-                      ./images/team/team1@2x-768.jpg 708w
+                      ./images\team\team_img_01@1x_md.jpg 1x,
+                      ./images\team\team_img_01@2x_md.jpg 2x
                     "
                     media="(max-width: 1199.98px)"
                     sizes="(min-width: 768px) 354px, 100vw"
                   />
                   <source
                     srcset="
-                      ./images/team/team1@1x-1200.jpg 270w,
-                      ./images/team/team1@2x-1200.jpg 540w
+                      ./images\team\team_img_01@1x_lg.jpg 1x,
+                      ./images\team\team_img_01@2x_lg.jpg 2x
                     "
                     media="(min-width: 1200px)"
                     sizes="(min-width: 1200px) 270px, 100vw"
@@ -252,7 +254,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-instagram"></use>
+                          <use href="./images/icons.svg#icon-sm-instagram"></use>
                         </svg>
                       </a>
                     </li>
@@ -264,7 +266,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-twitter"></use>
+                          <use href="./images/icons.svg#icon-sm-twitter"></use>
                         </svg>
                       </a>
                     </li>
@@ -276,7 +278,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-facebook"></use>
+                          <use href="./images/icons.svg#icon-sm-facebook"></use>
                         </svg>
                       </a>
                     </li>
@@ -288,7 +290,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-linkedin"></use>
+                          <use href="./images/icons.svg#icon-sm-linkedin"></use>
                         </svg>
                       </a>
                     </li>
@@ -299,24 +301,24 @@
                 <picture>
                   <source
                     srcset="
-                      ./images/team/team2@1x-480.jpg 450w,
-                      ./images/team/team2@2x-480.jpg 900w
+                      ./images\team\team_img_02@1x_sm.jpg 1x,
+                      ./images\team\team_img_02@2x_sm.jpg 2x
                     "
                     media="(max-width: 767.98px)"
                     sizes="(min-width: 320px) 450px, 100vw"
                   />
                   <source
                     srcset="
-                      ./images/team/team2@1x-768.jpg 354w,
-                      ./images/team/team2@2x-768.jpg 708w
+                      ./images\team\team_img_02@1x_md.jpg 1x,
+                      ./images\team\team_img_02@2x_md.jpg 2x
                     "
                     media="(max-width: 1199.98px)"
                     sizes="(min-width: 768px) 354px, 100vw"
                   />
                   <source
                     srcset="
-                      ./images/team/team2@1x-1200.jpg 270w,
-                      ./images/team/team2@2x-1200.jpg 540w
+                      ./images\team\team_img_02@1x_lg.jpg 1x,
+                      ./images\team\team_img_02@2x_lg.jpg 2x
                     "
                     media="(min-width: 1200px)"
                     sizes="(min-width: 1200px) 270px, 100vw"
@@ -335,7 +337,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-instagram"></use>
+                          <use href="./images/icons.svg#icon-sm-instagram"></use>
                         </svg>
                       </a>
                     </li>
@@ -347,7 +349,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-twitter"></use>
+                          <use href="./images/icons.svg#icon-sm-twitter"></use>
                         </svg>
                       </a>
                     </li>
@@ -359,7 +361,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-facebook"></use>
+                          <use href="./images/icons.svg#icon-sm-facebook"></use>
                         </svg>
                       </a>
                     </li>
@@ -371,7 +373,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-linkedin"></use>
+                          <use href="./images/icons.svg#icon-sm-linkedin"></use>
                         </svg>
                       </a>
                     </li>
@@ -382,24 +384,24 @@
                 <picture>
                   <source
                     srcset="
-                      ./images/team/team3@1x-480.jpg 450w,
-                      ./images/team/team3@2x-480.jpg 900w
+                      ./images\team\team_img_03@1x_sm.jpg 1x,
+                      ./images\team\team_img_03@2x_sm.jpg 2x
                     "
                     media="(max-width: 767.98px)"
                     sizes="(min-width: 320px) 450px, 100vw"
                   />
                   <source
                     srcset="
-                      ./images/team/team3@1x-768.jpg 354w,
-                      ./images/team/team3@2x-768.jpg 708w
+                      ./images\team\team_img_03@1x_md.jpg 1x,
+                      ./images\team\team_img_03@2x_md.jpg 2x
                     "
                     media="(max-width: 1199.98px)"
                     sizes="(min-width: 768px) 354px, 100vw"
                   />
                   <source
                     srcset="
-                      ./images/team/team3@1x-1200.jpg 270w,
-                      ./images/team/team3@2x-1200.jpg 540w
+                      ./images\team\team_img_03@1x_lg.jpg 1x,
+                      ./images\team\team_img_03@2x_lg.jpg 2x
                     "
                     media="(min-width: 1200px)"
                     sizes="(min-width: 1200px) 270px, 100vw"
@@ -409,7 +411,7 @@
                 <div class="team__box">
                   <h3 class="team__title">Николай Тарасов</h3>
                   <p class="team__text" lang="en">Marketing</p>
-                  <ul class="social team__social">
+                  <ul class="social">
                     <li class="social__item">
                       <a
                         class="social__link team__link"
@@ -418,7 +420,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-instagram"></use>
+                          <use href="./images/icons.svg#icon-sm-instagram"></use>
                         </svg>
                       </a>
                     </li>
@@ -430,7 +432,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-twitter"></use>
+                          <use href="./images/icons.svg#icon-sm-twitter"></use>
                         </svg>
                       </a>
                     </li>
@@ -442,7 +444,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-facebook"></use>
+                          <use href="./images/icons.svg#icon-sm-facebook"></use>
                         </svg>
                       </a>
                     </li>
@@ -454,7 +456,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-linkedin"></use>
+                          <use href="./images/icons.svg#icon-sm-linkedin"></use>
                         </svg>
                       </a>
                     </li>
@@ -465,24 +467,24 @@
                 <picture>
                   <source
                     srcset="
-                      ./images/team/team4@1x-480.jpg 450w,
-                      ./images/team/team4@2x-480.jpg 900w
+                      ./images\team\team_img_04@1x_sm.jpg 1x,
+                      ./images\team\team_img_04@2x_sm.jpg 2x
                     "
                     media="(max-width: 767.98px)"
                     sizes="(min-width: 320px) 450px, 100vw"
                   />
                   <source
                     srcset="
-                      ./images/team/team4@1x-768.jpg 354w,
-                      ./images/team/team4@2x-768.jpg 708w
+                      ./images\team\team_img_04@1x_md.jpg 1x,
+                      ./images\team\team_img_04@2x_md.jpg 2x
                     "
                     media="(max-width: 1199.98px)"
                     sizes="(min-width: 768px) 354px, 100vw"
                   />
                   <source
                     srcset="
-                      ./images/team/team4@1x-1200.jpg 270w,
-                      ./images/team/team4@2x-1200.jpg 540w
+                      ./images\team\team_img_04@1x_lg.jpg 1x,
+                      ./images\team\team_img_04@2x_lg.jpg 2x
                     "
                     media="(min-width: 1200px)"
                     sizes="(min-width: 1200px) 270px, 100vw"
@@ -501,7 +503,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-instagram"></use>
+                          <use href="./images/icons.svg#icon-sm-instagram"></use>
                         </svg>
                       </a>
                     </li>
@@ -513,7 +515,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-twitter"></use>
+                          <use href="./images/icons.svg#icon-sm-twitter"></use>
                         </svg>
                       </a>
                     </li>
@@ -525,7 +527,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-facebook"></use>
+                          <use href="./images/icons.svg#icon-sm-facebook"></use>
                         </svg>
                       </a>
                     </li>
@@ -537,7 +539,7 @@
                         rel="nofollow noopener noreferrer"
                       >
                         <svg class="social__icon">
-                          <use href="./images/icons.svg#social-linkedin"></use>
+                          <use href="./images/icons.svg#icon-sm-linkedin"></use>
                         </svg>
                       </a>
                     </li>
@@ -548,7 +550,7 @@
           </div>
         </section>
 
-        <!--Постоянные клиенты-->
+        <!--Clients Section-->
         <section class="section">
           <div class="container">
             <h2 class="section__title">Постоянные клиенты</h2>
@@ -556,42 +558,42 @@
               <li class="clients__item">
                 <a class="clients__link" href="" target="_blank" rel="nofollow noopener noreferrer">
                   <svg class="clients__icon">
-                    <use href="./images/icons.svg#client1"></use>
+                    <use href="./images/icons.svg#icon-logo-1"></use>
                   </svg>
                 </a>
               </li>
               <li class="clients__item">
                 <a class="clients__link" href="" target="_blank" rel="nofollow noopener noreferrer">
                   <svg class="clients__icon">
-                    <use href="./images/icons.svg#client2"></use>
+                    <use href="./images/icons.svg#icon-logo-2"></use>
                   </svg>
                 </a>
               </li>
               <li class="clients__item">
                 <a class="clients__link" href="" target="_blank" rel="nofollow noopener noreferrer">
                   <svg class="clients__icon">
-                    <use href="./images/icons.svg#client3"></use>
+                    <use href="./images/icons.svg#icon-logo-3"></use>
                   </svg>
                 </a>
               </li>
               <li class="clients__item">
                 <a class="clients__link" href="" target="_blank" rel="nofollow noopener noreferrer">
                   <svg class="clients__icon">
-                    <use href="./images/icons.svg#client4"></use>
+                    <use href="./images/icons.svg#icon-logo-4"></use>
                   </svg>
                 </a>
               </li>
               <li class="clients__item">
                 <a class="clients__link" href="" target="_blank" rel="nofollow noopener noreferrer">
                   <svg class="clients__icon">
-                    <use href="./images/icons.svg#client5"></use>
+                    <use href="./images/icons.svg#icon-logo-5"></use>
                   </svg>
                 </a>
               </li>
               <li class="clients__item">
                 <a class="clients__link" href="" target="_blank" rel="nofollow noopener noreferrer">
                   <svg class="clients__icon">
-                    <use href="./images/icons.svg#client6"></use>
+                    <use href="./images/icons.svg#icon-logo-6"></use>
                   </svg>
                 </a>
               </li>
@@ -610,10 +612,10 @@
                 <li class="footer-contacts__item">
                   <a
                     class="footer-contacts__link footer-contacts__link--white"
-                    href="https://goo.gl/maps/X2jcXpadv5ityZMy6"
+                    href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4266594,30.5382177,18.25z/data=!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
                     target="_blank"
                     rel="nofollow noopener noreferrer"
-                    >г. Киев, пр-т Леси Украинки, 26</a
+                    >г. Киев, пр-т. Леси Украинки, 26</a
                   >
                 </li>
                 <li class="footer-contacts__item">
@@ -639,7 +641,7 @@
                   rel="nofollow noopener noreferrer"
                 >
                   <svg class="social__icon">
-                    <use href="./images/icons.svg#social-instagram"></use>
+                    <use href="./images/icons.svg#icon-sm-instagram"></use>
                   </svg>
                 </a>
               </li>
@@ -651,7 +653,7 @@
                   rel="nofollow noopener noreferrer"
                 >
                   <svg class="social__icon">
-                    <use href="./images/icons.svg#social-twitter"></use>
+                    <use href="./images/icons.svg#icon-sm-twitter"></use>
                   </svg>
                 </a>
               </li>
@@ -663,7 +665,7 @@
                   rel="nofollow noopener noreferrer"
                 >
                   <svg class="social__icon">
-                    <use href="./images/icons.svg#social-facebook"></use>
+                    <use href="./images/icons.svg#icon-sm-facebook"></use>
                   </svg>
                 </a>
               </li>
@@ -675,7 +677,7 @@
                   rel="nofollow noopener noreferrer"
                 >
                   <svg class="social__icon">
-                    <use href="./images/icons.svg#social-linkedin"></use>
+                    <use href="./images/icons.svg#icon-sm-linkedin"></use>
                   </svg>
                 </a>
               </li>
@@ -699,7 +701,7 @@
                 <button class="button subscription__button" type="submit">
                   Подписаться
                   <svg class="subscription__icon">
-                    <use href="./images/icons.svg#subscription-send"></use>
+                    <use href="./images/icons.svg#icon-paper-airplane"></use>
                   </svg>
                 </button>
               </div>
@@ -714,7 +716,7 @@
       <div class="modal">
         <button class="btn-close" type="button" data-modal-close>
           <svg class="btn-close__icon">
-            <use href="./images/icons.svg#close-modal"></use>
+            <use href="./images/icons.svg#icon-icon-close"></use>
           </svg>
         </button>
 
@@ -725,7 +727,7 @@
               <span class="order__label">Имя</span>
               <input class="order__input" type="text" name="user-name" id="person" autofocus />
               <svg class="order__icon">
-                <use href="./images/icons.svg#modal-person"></use>
+                <use href="./images/icons.svg#icon-modal-user"></use>
               </svg>
             </label>
 
@@ -733,7 +735,7 @@
               <span class="order__label">Телефон</span>
               <input class="order__input" type="tel" name="phone" id="phone" />
               <svg class="order__icon">
-                <use href="./images/icons.svg#modal-phone"></use>
+                <use href="./images/icons.svg#icon-modal-phone"></use>
               </svg>
             </label>
 
@@ -741,7 +743,7 @@
               <span class="order__label">Почта</span>
               <input class="order__input" type="email" name="e-mail" id="e-mail" />
               <svg class="order__icon">
-                <use href="./images/icons.svg#modal-email"></use>
+                <use href="./images/icons.svg#icon-modal-mail"></use>
               </svg>
             </label>
 
@@ -801,5 +803,5 @@
     <!-- AOS aniamtion library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/animations.js"></script>
-    </body>
+  </body>
 </html>

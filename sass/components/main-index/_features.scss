@@ -1,0 +1,57 @@
+/* Особенности*/
+
+.features {
+  @extend %list;
+  @include centered-flex($justify-content: space-between, $align-items: stretch);
+  flex-wrap: wrap;
+  gap: $indent;
+  padding-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__item {
+    @include media-query(mobile) {
+      @include flex-basis($indent, 1);
+    }
+
+    @include media-query(tablet) {
+      @include flex-basis($indent, 2);
+    }
+
+    @include media-query(desktop) {
+      @include flex-basis($indent, 4);
+    }
+  }
+
+  &__box {
+    @include centered-flex();
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: $second-grey-color;
+    border-radius: 4px;
+  }
+  &__icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__title {
+    color: $title-text-color;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16.41 / 14);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+
+    @include media-query(tablet) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
+}

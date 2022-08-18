@@ -1,0 +1,33 @@
+/* Кнопки */
+
+.button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+
+  border: 0;
+  border-radius: 4px;
+  text-align: center;
+
+  cursor: pointer;
+
+  color: $primary-white-color;
+  background-color: $accent-color;
+
+  display: block;
+  padding: 10px 32px;
+  min-width: 200px;
+
+  margin: 0 auto;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-color;
+  }
+}

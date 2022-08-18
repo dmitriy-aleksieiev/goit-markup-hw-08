@@ -1,0 +1,28 @@
+.header-social {
+  @extend %list;
+
+  @media screen and (max-width: ($tablet - 1px)) {
+    @include centered-flex($justify-content: flex-start);
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  &__item:not(:last-child) {
+    padding-right: 10px;
+    border-right: 1px solid $third-border-color;
+  }
+
+  &__link {
+    color: $accent-color;
+
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    text-decoration: none;
+  }
+}
