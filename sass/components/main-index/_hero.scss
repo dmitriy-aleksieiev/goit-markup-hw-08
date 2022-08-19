@@ -23,8 +23,8 @@
   @include media-query(desktop) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       image-set(
-        url('/images/hero/hero_img@2x_lg.jpg') 2x,
-        url('/images/hero/hero_img@1x_lg.jpg') 1x
+        url('../images/hero/hero_img@2x_lg.jpg') 2x,
+        url('../images/hero/hero_img@1x_lg.jpg') 1x
       );
   }
 
