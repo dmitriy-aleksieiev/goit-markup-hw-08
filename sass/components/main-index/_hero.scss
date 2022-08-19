@@ -10,19 +10,25 @@
   padding: 118px 0;
 
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    image-set(url('/images/hero/hero_img@2x_sm.jpg') 2x, url('/images/hero/hero_img@1x_sm.jpg') 1x);
+    image-set(
+      url('../images/hero/hero_img@2x_sm.jpg') 2x,
+      url('../images/hero/hero_img@1x_sm.jpg') 1x
+    );
 
   @include media-query(tablet) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       image-set(
-        url('/images/hero/hero_img@2x_md.jpg') 2x,
-        url('/images/hero/hero_img@1x_md.jpg') 1x
+        url('../images/hero/hero_img@2x_md.jpg') 2x,
+        url('../images/hero/hero_img@1x_md.jpg') 1x
       );
   }
 
   @include media-query(desktop) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      image-set(url('images/hero/hero_img@2x_lg.jpg') 2x, url('images/hero/hero_img@1x_lg.jpg') 1x);
+      image-set(
+        url('../images/hero/hero_img@2x_lg.jpg') 2x,
+        url('../images/hero/hero_img@1x_lg.jpg') 1x
+      );
   }
 
   //    Закрепленный хэдэр
