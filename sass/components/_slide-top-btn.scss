@@ -16,6 +16,9 @@
     border-radius: 50%;
     cursor: pointer;
 
+    // Убрать для появления кнопки
+    display: none;
+
     animation: slide-top 1s linear 2s infinite alternate both;
   }
 }
